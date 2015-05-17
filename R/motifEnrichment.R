@@ -4,7 +4,8 @@
 #'@param universe.promoters A dataframe with the total number of promotors to test against.
 #'@param motifs An output from DNAStringSet()
 #'@return A data frame of tested motifs with sorted p-values
-#'@example motifEnrichment(my.targets, my.universe, all.counts = F, motifs=motifsSS)
+#'@examples 
+#' motifEnrichment(my.targets, my.universe, all.counts = F, motifs=motifsSS)
 
 motifEnrichment <- function(target.promoters,universe.promoters,all.counts=F,motifs=motifsSS) {
   
