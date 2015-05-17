@@ -4,7 +4,7 @@ Version: 0.0.1
 Authors@R: c(
     person("Cody", "Markelz", email = "markelz@gmail.com", role = c("aut", "cre")),
     person("Julin", "Maloof", email = "jnmaloof@ucdavis.edu", role = "aut"))
-Description: This package contains small datasets and convenience to accompany teaching bioinformatics to undergraduates.
+Description: This package contains small datasets and convenience functions to accompany teaching bioinformatics to undergraduates.
 Depends: R (>= 3.1.1)
 License: MIT
 LazyData: true
@@ -12,5 +12,6 @@ Imports:
     ggplot2,
     igraph,
     MBCluster.Seq,
+    Biostrings
 URL: http://jnmaloof.github.io/BIS180L_web/
 BugReports: https://github.com/rjcmarkelz/BIS180L/issues

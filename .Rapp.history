@@ -1,0 +1,308 @@
+ans <- kin.blup(data = data, geno = "gid", pheno = "y", K = A)
+accuracy <- cor(g,ans$g)
+accuracy
+str(ans)
+plot(g, ans$g)
+ans2 <- mixed.solve(y,K=A.mat(M))
+str(ans2)
+accuracy2 <- cor(g,ans2$u)
+accuracy2
+plot(g, ans2$u)
+M <- matrix(rep(0,124*1400),124,1400)
+for (i in 1:124) {#
+M[i,] <- ifelse(runif(1400)<0.5,-1,1)#
+}
+head(M)
+u <- rnorm(1400)
+head(u)
+g <- as.vector(crossprod(t(M),u))
+head(g)
+plot(g)
+h2 <- 0.5 #heritability
+y <- g + rnorm(124,mean=0,sd=sqrt((1-h2)/h2*var(g)))
+head(y)
+phenoEST <- y[1:100,]
+dim(y)
+str(y)
+phenoEST <- y[1:100]
+phenoVal <- y[101:124]
+g
+str(M)
+marksEst <- M[1:100,]
+marksVal <- M[101:124,]
+mrkEff   <- mixed.solve(y = phenoEST, Z = marksEst)$u
+mrkEff
+gebvVec1 <- mrksVal%*%mrkEff
+gebvVec1 <- marksVal%*%mrkEff
+(predAb1 <- cor(gebvVec1, phenoVal))
+u <- rnorm(1400)
+head(u)
+g <- as.vector(crossprod(t(M),u))
+head(g)
+plot(g)
+h2 <- 0.9 #heritability
+y <- g + rnorm(124,mean=0,sd=sqrt((1-h2)/h2*var(g)))
+phenoEST <- y[1:100]
+phenoVal <- y[101:124]
+marksEst <- M[1:100,]
+marksVal <- M[101:124,]
+mrkEff   <- mixed.solve(y = phenoEST, Z = marksEst)$u
+mrkEff
+gebvVec1 <- marksVal%*%mrkEff
+(predAb1 <- cor(gebvVec1, phenoVal))
+y <- g + rnorm(124,mean=0,sd=sqrt((1-h2)/h2*var(g)))
+head(y)
+dim(y)
+str(y)
+phenoEST <- y[1:100]
+phenoVal <- y[101:124]
+g
+str(M)
+marksEst <- M[1:100,]
+marksVal <- M[101:124,]
+mrkEff   <- mixed.solve(y = phenoEST, Z = marksEst)$u
+mrkEff
+gebvVec1 <- marksVal%*%mrkEff
+(predAb1 <- cor(gebvVec1, phenoVal))
+h2 <- 0.9 #heritability
+y <- g + rnorm(124,mean=0,sd=sqrt((1-h2)/h2*var(g)))
+head(y)
+dim(y)
+str(y)
+phenoEST <- y[1:100]
+phenoVal <- y[101:124]
+g
+str(M)
+marksEst <- M[1:100,]
+marksVal <- M[101:124,]
+mrkEff   <- mixed.solve(y = phenoEST, Z = marksEst)$u
+mrkEff
+gebvVec1 <- marksVal%*%mrkEff
+(predAb1 <- cor(gebvVec1, phenoVal))
+h2 <- 0.9 #heritability
+y <- g + rnorm(124,mean=0,sd=sqrt((1-h2)/h2*var(g)))
+head(y)
+dim(y)
+str(y)
+phenoEST <- y[1:100]
+phenoVal <- y[101:124]
+g
+str(M)
+marksEst <- M[1:100,]
+marksVal <- M[101:124,]
+mrkEff   <- mixed.solve(y = phenoEST, Z = marksEst)$u
+mrkEff
+gebvVec1 <- marksVal%*%mrkEff
+(predAb1 <- cor(gebvVec1, phenoVal))
+h2 <- 0.9 #heritability
+y <- g + rnorm(124,mean=0,sd=sqrt((1-h2)/h2*var(g)))
+head(y)
+dim(y)
+str(y)
+phenoEST <- y[1:100]
+phenoVal <- y[101:124]
+g
+str(M)
+marksEst <- M[1:100,]
+marksVal <- M[101:124,]
+mrkEff   <- mixed.solve(y = phenoEST, Z = marksEst)$u
+mrkEff
+gebvVec1 <- marksVal%*%mrkEff
+(predAb1 <- cor(gebvVec1, phenoVal))
+h2 <- 0.9 #heritability
+y <- g + rnorm(124,mean=0,sd=sqrt((1-h2)/h2*var(g)))
+head(y)
+dim(y)
+str(y)
+phenoEST <- y[1:100]
+phenoVal <- y[101:124]
+g
+str(M)
+marksEst <- M[1:100,]
+marksVal <- M[101:124,]
+mrkEff   <- mixed.solve(y = phenoEST, Z = marksEst)$u
+mrkEff
+gebvVec1 <- marksVal%*%mrkEff
+(predAb1 <- cor(gebvVec1, phenoVal))
+h2 <- 0.9 #heritability
+y <- g + rnorm(124,mean=0,sd=sqrt((1-h2)/h2*var(g)))
+head(y)
+dim(y)
+str(y)
+phenoEST <- y[1:100]
+phenoVal <- y[101:124]
+g
+str(M)
+marksEst <- M[1:100,]
+marksVal <- M[101:124,]
+mrkEff   <- mixed.solve(y = phenoEST, Z = marksEst)$u
+mrkEff
+gebvVec1 <- marksVal%*%mrkEff
+(predAb1 <- cor(gebvVec1, phenoVal))
+h2 <- 0.9 #heritability
+y <- g + rnorm(124,mean=0,sd=sqrt((1-h2)/h2*var(g)))
+head(y)
+dim(y)
+str(y)
+phenoEST <- y[1:100]
+phenoVal <- y[101:124]
+g
+str(M)
+marksEst <- M[1:100,]
+marksVal <- M[101:124,]
+mrkEff   <- mixed.solve(y = phenoEST, Z = marksEst)$u
+mrkEff
+gebvVec1 <- marksVal%*%mrkEff
+(predAb1 <- cor(gebvVec1, phenoVal))
+h2 <- 0.9 #heritability
+y <- g + rnorm(124,mean=0,sd=sqrt((1-h2)/h2*var(g)))
+head(y)
+dim(y)
+str(y)
+phenoEST <- y[1:100]
+phenoVal <- y[101:124]
+g
+str(M)
+marksEst <- M[1:100,]
+marksVal <- M[101:124,]
+mrkEff   <- mixed.solve(y = phenoEST, Z = marksEst)$u
+mrkEff
+gebvVec1 <- marksVal%*%mrkEff
+(predAb1 <- cor(gebvVec1, phenoVal))
+mrkEff   <- mixed.solve(y = phenoEST, Z = marksEst, K = A.mat(marksEst))
+mrkEff   <- mixed.solve(y = phenoEST, K = A.mat(marksEst))
+mrkEff
+mrkEff   <- mixed.solve(y = phenoEST, K = A.mat(marksEst))$u
+mrkEff
+gebvVec2 <- marksVal%*%mrkEff
+mrkEff   <- mixed.solve(y = phenoEST, Z = marksEst)$u
+mrkEff
+mrkEff   <- mixed.solve(y = phenoEST, K = A.mat(marksEst))
+mrkEff
+?kinship.BLUP
+data <- data.frame(y = phenoEST, gid = 1:100)
+marksEst <- M[1:100,]
+row.names(marksEst) <- 1:100
+head(data)
+A <- A.mat(M)
+A <- A.mat(marksEst)
+A
+ans <- kin.blup(data = data, geno = "gid", pheno = "y", K = A)
+str(ans)
+cor(g[1:100], ans$g)
+cor(g, ans$g)
+rownames(data.pheno.mds) <- data.pheno.mds$Row.names
+install.packages("MBCluster.Seq")
+data("Count")
+library("MBCluster.Seq")
+data("Count")
+head(Count)
+dim(count)
+dim(Count)
+geneID <- 1:nrow(Count)
+norm   <- rep(1, ncol(Count))
+Treat  <- rep(1:4, 2)
+mydata <- RNASeq.Data(Count, Normalize = NULL, Treat, GeneID)
+mydata <- RNASeq.Data(Count, Normalize = NULL, Treat, geneID)
+head(mydata)
+c0 <- KmeansPlus.RNASeq(data = mydata, nK = 10)$centers
+cls <- Cluster.RNASeq(data = mydata, model = "nbinom", centers = c0, method = "EM")$cluster
+tree <- Hybrid.Tree(data = mydata, cluste = cls, model = "nbinom")
+plotHybrid.Tree(merge = tr, cluster = cls, logFC = mydata$logFC, tree.title = NULL)
+plotHybrid.Tree(merge = tree, cluster = cls, logFC = mydata$logFC, tree.title = NULL)
+head(tree)
+tree <- Hybrid.Tree(data = mydata, cluster = cls, model = "nbinom")
+plotHybrid.Tree(merge = tree, cluster = cls, logFC = mydata$logFC, tree.title = NULL)
+c0
+head(mydata)
+str(mydata)
+mydata <- RNASeq.Data(Count, Normalize = norm, Treat, geneID)
+str(mydata)
+c0 <- KmeansPlus.RNASeq(data = mydata, nK = 10)$centers
+cls <- Cluster.RNASeq(data = mydata, model = "nbinom", centers = c0, method = "EM")$cluster
+tree <- Hybrid.Tree(data = mydata, cluster = cls, model = "nbinom")
+plotHybrid.Tree(merge = tree, cluster = cls, logFC = mydata$logFC, tree.title = NULL)
+install.packages("devtools")
+libary("devtools")
+library("devtools")
+devtools::install_github("klutometis/roxygen")
+pwd()
+setwd("/Users/Cody_2/git.repos/qtlanalyzeR")
+setwd("/Users/Cody_2/git.repos/")
+create("BIS180L")
+test_function <- function(X = 20){#
+    if(X = 20){#
+        print("You found me!")#
+    }#
+    else {#
+        print("guess again!")#
+    }#
+}
+test_function <- function(X = 20){#
+    if(X = 20){#
+        print("You found me!")#
+    }#
+    else {#
+        print("guess again!")#
+    }#
+}
+test_function <- function(X = 20){#
+    if(X = 20){#
+        print("You found me!")#
+    }#
+    else {#
+        print("guess again!")#
+    }#
+}
+test_function <- function(X){#
+    if(X = 20){#
+        print("You found me!")#
+    }#
+    else {#
+        print("guess again!")#
+    }#
+}
+}
+test_function <- function(X){#
+    if(X = 20){#
+        print("You found me!")#
+    }#
+    else {#
+        print("guess again!")#
+    }#
+}
+test_function <- function(X){#
+    if(X > 20){#
+        print("You found me!")#
+    }#
+    else {#
+        print("guess again!")#
+    }#
+}
+test_function(10)
+test_function(20)
+test_function <- function(X){#
+    if(X >= 20){#
+        print("You found me!")#
+    }#
+    else {#
+        print("guess again!")#
+    }#
+}
+test_function <- function(X){#
+    if(X >= 20){#
+        print("You found me!")#
+    }#
+    else {#
+        print("guess again!")#
+    }#
+}
+test_function(15)
+test_function(20)
+search()
+devtools::use_package("ggplot", "Suggests")
+devtools::use_package("ggplot2", "Suggests")
+setwd("/Users/Cody_2/git.repos/BIS180L/")
+devtools::use_package("ggplot2", "Suggests")
+devtools::use_package("igraph", "Suggests")
+devtools::use_package("MBCluster.Seq", "Suggests")

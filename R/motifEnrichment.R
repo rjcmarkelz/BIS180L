@@ -1,6 +1,13 @@
-#create a function to summarize the results and test for significance
-motifEnrichment <- function(target.promoters,universe.promoters,all.counts=F,motifs=motifsSS) {
+#' Test for motif enrichment significance
+#'
+#'@param target.promoters A dataframe with target promoters.
+#'@param universe.promoters A dataframe with the total number of promotors to test against.
+#'@param motifs An output from DNAStringSet()
+#'@return A data frame of tested motifs with sorted p-values
+#'@example motifEnrichment(my.targets, my.universe, all.counts = F, motifs=motifsSS)
 
+motifEnrichment <- function(target.promoters,universe.promoters,all.counts=F,motifs=motifsSS) {
+  
   #use vcountPDict to count the occurences of each motif in each promoter
   target.counts <- vcountPDict(motifs,target.promoters,fixed=F) + 
     vcountPDict(motifsSS,reverseComplement(target.promoters),fixed=F)
